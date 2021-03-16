@@ -14,6 +14,8 @@ public class Student {
 	private String email;
 	private String city;
 
+	private Certificate certificate;
+
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -59,11 +61,17 @@ public class Student {
 		this.city = city;
 	}
 
+	public Certificate getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(Certificate certificate) {
+		this.certificate = certificate;
+	}
+
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", email=" + email + ", city=" + city + "]";
 	}
 
-	
-	
 }
