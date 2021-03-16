@@ -25,11 +25,25 @@ public class App
         
         //CREATING OBJECT OF STUDENT
         Student  student=new Student();
+        Student  student1=new Student();
+        Student  student2=new Student();
         
         student.setId(101);
         student.setName("SOHAIL SHAIKH");
         student.setEmail("sohailss4444@gmail.com");
         student.setCity("MUMBAI");
+        
+        
+        student1.setId(102);
+        student1.setName("Viral Surti");
+        student1.setEmail("Viral@gmail.com");
+        student1.setCity("MUMBAI");
+        
+        
+        student2.setId(103);
+        student2.setName("Kedar Sir");
+        student2.setEmail("KedarSir@gmail.com");
+        student2.setCity("MUMBAI");
         
         
         //CREATING OBJECT OF ADDRESS
@@ -55,10 +69,14 @@ public class App
         Session session=sessionFactory.openSession();       
         Transaction transaction=session.beginTransaction();
         
-        session.save(student);
-        session.save(add);
+        //session.save(student);
+        //session.save(student1);
+        // session.save(student2);
+                
+        //session.save(add);
         
         transaction.commit();
+        sessionFactory.close();
         session.close();
         
         System.out.println("DONE !!!");
