@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -14,11 +15,14 @@ public class Answer {
 	@Id
 	@Column(name = "Answer_Id")
 	private int answerId;
-	
+
 	@Column(name = "Answer")
 	private String answer;
-	
-	@OneToOne(mappedBy = "answer")
+
+//	@OneToOne(mappedBy = "answer")
+//	private Question question;
+
+	@ManyToOne
 	private Question question;
 
 	public Answer() {
@@ -26,10 +30,16 @@ public class Answer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Answer(int answerId, String answer) {
+	/**
+	 * @param answerId
+	 * @param answer
+	 * @param question
+	 */
+	public Answer(int answerId, String answer, Question question) {
 		super();
 		this.answerId = answerId;
 		this.answer = answer;
+		this.question = question;
 	}
 
 	public int getAnswerId() {
@@ -48,15 +58,18 @@ public class Answer {
 		this.answer = answer;
 	}
 
+
+	public Question getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+
 	@Override
 	public String toString() {
 		return "Answer [answerId=" + answerId + ", answer=" + answer + ", question=" + question + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }
