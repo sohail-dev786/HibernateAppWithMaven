@@ -31,7 +31,7 @@ public class MappingDemo {
 	
 	
 	
-//	CREATING OBJECT OF PEOJECT
+//	CREATING OBJECT OF PROJECT
 	
 	Project proj1=new Project();
 	Project proj2=new Project();
@@ -42,7 +42,7 @@ public class MappingDemo {
 	proj2.setProjId(2002);
 	proj2.setProjName("E-COMMERCE");
 	
-	//MANY TO MANY RELATION SHIP IS THERE -FOR THAT WE HAVE MULTIPLE RECORD FOR A SINGLE PERSON 
+	//MANY TO MANY RELATION SHIP IS THERE -FOR THAT WE HAVE TO INSERT MULTIPLE RECORD FOR A SINGLE PERSON 
 	//SO WE CAN  STORE  THAT VALES IN A LIST AND THEN ASSIGN TO OUR SETTER.
 	
 	List<Employee> employees=new ArrayList<Employee>();

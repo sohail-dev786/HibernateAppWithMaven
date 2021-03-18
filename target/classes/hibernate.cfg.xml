@@ -11,6 +11,9 @@
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		
+		
 		<mapping class="com.hibernate.Student"/>
 		<mapping class="com.hibernate.Address"/>
 		<mapping class="com.mapping.Question"/>

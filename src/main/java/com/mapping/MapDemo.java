@@ -100,20 +100,24 @@ public class MapDemo {
 //		OneToMany  & ManyToOne  ->demo
 		Question fetchQuestion = session.get(Question.class, 111);
 
+		System.out.println(fetchQuestion.getQuestionId());
 		System.out.println(fetchQuestion.getQuestion());
-		System.out.println("-------------------");
+		System.out.println(fetchQuestion.getAnswer().size());
 
-		for (Answer a : fetchQuestion.getAnswer()) {
-			
-			System.out.println("-------------------");
-
-			System.out.println(a.getAnswer());
-
-			System.out.println("-------------------");
-
-
-		}
 		
+//		System.out.println("-------------------");
+
+//		for (Answer a : fetchQuestion.getAnswer()) {
+//			
+//			System.out.println("-------------------");
+//
+//			System.out.println(a.getAnswer());
+//
+//			System.out.println("-------------------");
+//
+//
+//		}
+
 		
 		
 		
